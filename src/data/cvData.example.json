@@ -5,10 +5,26 @@
         "name": "name",
         "title": "profession",
         "contacts": {
-          "phone": "1234567",
-          "email": "email@gmail.com",
-          "linkedin": "http://www.linkedin.com/in/",
-          "address": "city zip code ecc"
+          "contacts": [
+            {
+              "label": "Email",
+              "value": "email@gmail.com",
+              "link": "mailto:email@gmail.com"
+            },
+            {
+              "label": "Telefono",
+              "value": "1234567"
+            },
+            {
+              "label": "LinkedIn",
+              "value": "linkedin.com/in/",
+              "link": "http://www.linkedin.com/in/"
+            },
+            {
+              "label": "Indirizzo",
+              "value": "Torino, 10126"
+            }
+          ]
         }
       },
       "skills": [
@@ -34,12 +50,26 @@
       "header": {
         "name": "name",
         "title": "profession",
-        "contacts": {
-          "phone": "1234567",
-          "email": "email@gmail.com",
-          "linkedin": "http://www.linkedin.com/in/",
-          "address": "city zip code ecc"
-        }
+        "contacts": [
+          {
+            "label": "Email",
+            "value": "email@gmail.com",
+            "link": "mailto:email@gmail.com"
+          },
+          {
+            "label": "Phone",
+            "value": "1234567"
+          },
+          {
+            "label": "LinkedIn",
+            "value": "linkedin.com/in/",
+            "link": "http://www.linkedin.com/in/"
+          },
+          {
+            "label": "Address",
+            "value": "Turin, 10126"
+          }
+        ]
       },
       "skills": [
         "Problem Solving",

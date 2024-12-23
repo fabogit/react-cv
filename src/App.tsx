@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import cvData from "./data/cvData.json";
+import Header from "./components/Header";
 
 const App: React.FC = () => {
   const [language, setLanguage] = useState<"it" | "en">("it");
-  const data = cvData.languages[language];
+  const data = cvData.languages[language].header;
 
   return (
     <div>
-      <header>
-        <h1>{data.header.name}</h1>
-        <h2>{data.header.title}</h2>
-        <p>Email: {data.header.contacts.email}</p>
-        <button onClick={() => setLanguage("it")}>Italiano</button>
-        <button onClick={() => setLanguage("en")}>English</button>
-      </header>
-      {/* components */}
+      <Header name={data.name} title={data.title} contacts={data.contacts} />
+      <button onClick={() => setLanguage("it")}>Italiano</button>
+      <button onClick={() => setLanguage("en")}>English</button>
     </div>
   );
 };

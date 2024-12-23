@@ -1,0 +1,64 @@
+{
+  "languages": {
+    "it": {
+      "header": {
+        "name": "name",
+        "title": "profession",
+        "contacts": {
+          "phone": "1234567",
+          "email": "email@gmail.com",
+          "linkedin": "http://www.linkedin.com/in/",
+          "address": "city zip code ecc"
+        }
+      },
+      "skills": [
+        "Problem Solving",
+        "Teamwork",
+        "ecc",
+        "ecc"
+      ],
+      "experience": [
+        {
+          "role": "role",
+          "company": "company",
+          "location": "city",
+          "period": "from to",
+          "tasks": [
+            "bugfix",
+            "task"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "header": {
+        "name": "name",
+        "title": "profession",
+        "contacts": {
+          "phone": "1234567",
+          "email": "email@gmail.com",
+          "linkedin": "http://www.linkedin.com/in/",
+          "address": "city zip code ecc"
+        }
+      },
+      "skills": [
+        "Problem Solving",
+        "Teamwork",
+        "ecc",
+        "ecc"
+      ],
+      "experience": [
+        {
+          "role": "role",
+          "company": "company",
+          "location": "city",
+          "period": "from to",
+          "tasks": [
+            "bugfix",
+            "task"
+          ]
+        }
+      ]
+    }
+  }
+}

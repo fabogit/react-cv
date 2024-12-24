@@ -1,93 +1,127 @@
 {
   "languages": {
-    "it": {
-      "header": {
-        "name": "name",
-        "title": "profession",
-        "contacts": {
-          "contacts": [
-            {
-              "label": "Email",
-              "value": "email@gmail.com",
-              "link": "mailto:email@gmail.com"
-            },
-            {
-              "label": "Telefono",
-              "value": "1234567"
-            },
-            {
-              "label": "LinkedIn",
-              "value": "linkedin.com/in/",
-              "link": "http://www.linkedin.com/in/"
-            },
-            {
-              "label": "Indirizzo",
-              "value": "Torino, 10126"
-            }
-          ]
-        }
-      },
-      "skills": [
-        "Problem Solving",
-        "Teamwork",
-        "ecc",
-        "ecc"
-      ],
+    "English": {
       "experience": [
         {
-          "role": "role",
-          "company": "company",
-          "location": "city",
-          "period": "from to",
+          "company": "Company",
+          "location": "City",
+          "period": "date from/to",
+          "role": "Position",
           "tasks": [
-            "bugfix",
-            "task"
+            "TASK1",
+            "TASK2"
           ]
         }
-      ]
-    },
-    "en": {
+      ],
       "header": {
-        "name": "name",
-        "title": "profession",
         "contacts": [
           {
-            "label": "Email",
-            "value": "email@gmail.com",
-            "link": "mailto:email@gmail.com"
+            "icon": "person.png",
+            "value": "NAME"
           },
           {
-            "label": "Phone",
-            "value": "1234567"
+            "icon": "job.png",
+            "value": "JOB"
           },
           {
-            "label": "LinkedIn",
-            "value": "linkedin.com/in/",
-            "link": "http://www.linkedin.com/in/"
+            "icon": "mail.png",
+            "link": "mailto:mail@gmail.com",
+            "value": "mail@gmail.com"
           },
           {
-            "label": "Address",
-            "value": "Turin, 10126"
+            "icon": "github.png",
+            "link": "https://github.com/",
+            "value": "GitHub→"
+          },
+          {
+            "icon": "linkedin.png",
+            "link": "http://www.linkedin.com/",
+            "value": "Linkedin→"
+          },
+          {
+            "icon": "phone.png",
+            "value": "123456789"
+          },
+          {
+            "icon": "location.png",
+            "value": "CITY, Zip"
           }
-        ]
+        ],
+        "image": "profile.jpg",
+        "name": "Smith",
+        "summary": [
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis."
+        ],
+        "title": "Job"
       },
       "skills": [
         "Problem Solving",
         "Teamwork",
-        "ecc",
-        "ecc"
-      ],
+        "Adaptability",
+        "Deadline Management"
+      ]
+    },
+    "Italiano": {
       "experience": [
         {
-          "role": "role",
-          "company": "company",
-          "location": "city",
-          "period": "from to",
+          "company": "Azienda",
+          "location": "Citta",
+          "period": "data da/a",
+          "role": "Posizione",
           "tasks": [
-            "bugfix",
-            "task"
+            "TASK1",
+            "TASK2"
           ]
         }
+      ],
+      "header": {
+        "contacts": [
+          {
+            "icon": "person.png",
+            "value": "Nome"
+          },
+          {
+            "icon": "job.png",
+            "value": "Titolo professionale"
+          },
+          {
+            "icon": "mail.png",
+            "link": "mailto:email@gmail.com",
+            "value": "email@gmail.com"
+          },
+          {
+            "icon": "github.png",
+            "link": "https://github.com/",
+            "value": "GitHub→"
+          },
+          {
+            "icon": "linkedin.png",
+            "link": "http://www.linkedin.com/",
+            "value": "Linkedin→"
+          },
+          {
+            "icon": "phone.png",
+            "value": "123456789"
+          },
+          {
+            "icon": "location.png",
+            "value": "Citta, cap"
+          }
+        ],
+        "image": "profile.jpg",
+        "name": "None/Titolo",
+        "summary": [
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis."
+        ],
+        "title": "Extra"
+      },
+      "skills": [
+        "Problem Solving",
+        "Teamwork",
+        "Adattabilità",
+        "Gestione scadenze"
       ]
     }
   }

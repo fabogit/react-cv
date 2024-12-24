@@ -1,36 +1,70 @@
 import React from "react";
+import "./../styles/Header.css";
 
-interface Contact {
-  label: string;
+type Contact = {
+  icon: string;
+  link?: string;
   value: string;
-  link?: string; // Opzionale per URL o email
-}
+};
 
 interface HeaderProps {
+  contacts: Contact[];
+  summary: string[];
+  image: string;
   name: string;
   title: string;
-  contacts: Contact[];
 }
 
-const Header: React.FC<HeaderProps> = ({ name, title, contacts }) => {
+const Header: React.FC<HeaderProps> = ({
+  //   name,
+  //   title,
+  contacts,
+  image,
+  summary,
+}) => {
+  const imageUrl = new URL(
+    `../assets/img/${image}`,
+    import.meta.url
+  ).toString();
+
+  const getIconUrl = (icon: string) => {
+    return new URL(`../assets/icons/${icon}`, import.meta.url).toString();
+  };
+
   return (
-    <header className="bg-gray-100 p-4 rounded-lg shadow-md">
-      <div className="text-center mb-4">
-        <h1 className="text-3xl font-bold">{name}</h1>
-        <h2 className="text-xl text-gray-600">{title}</h2>
+    <header className="header">
+      <div className="header-container">
+        {/* Colonna sinistra */}
+        <div className="header-left">
+          {/* <h1>{name}</h1> */}
+          <img src={imageUrl} alt={`${name}'s profile`} />
+        </div>
+        {/* Colonna destra */}
+        <div className="header-right">
+          {/* <h2>{title}</h2> */}
+          <div className="header-contacts">
+            {contacts.map((contact, index) => (
+              <p key={index}>
+                <img
+                  src={getIconUrl(contact.icon)}
+                  alt={`Contact icon ${index}`}
+                  className="contact-icon"
+                />
+                {contact.link ? (
+                  <a href={contact.link} className="contact-link">
+                    {contact.value}
+                  </a>
+                ) : (
+                  <span>{contact.value}</span>
+                )}
+              </p>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col items-center space-y-2">
-        {contacts.map((contact, index) => (
-          <p key={index}>
-            {contact.label}:{" "}
-            {contact.link ? (
-              <a href={contact.link} className="text-blue-500">
-                {contact.value}
-              </a>
-            ) : (
-              contact.value
-            )}
-          </p>
+      <div className="header-summary">
+        {summary.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
         ))}
       </div>
     </header>

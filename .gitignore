@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 src/data/cvData.json
+src/assets/img/profile.jpg
+src/assets/img/sign.png

@@ -28,11 +28,11 @@ const Header: React.FC<HeaderProps> = ({
   ).toString();
 
   const getIconUrl = (icon: string) => {
-    return new URL(`../assets/icons/${icon}`, import.meta.url).toString();
+    return new URL(`../assets/icons/header/${icon}`, import.meta.url).toString();
   };
 
   return (
-    <header className="header">
+    <header className="header card">
       <div className="header-container">
         {/* Colonna sinistra */}
         <div className="header-left">

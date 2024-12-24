@@ -1,0 +1,64 @@
+/* Stile generale per la sezione WorkExperience */
+.work-experience {
+  margin: 20px 0;
+}
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.work-item {
+  padding: 16px;
+  background-color: #fff;
+}
+
+.work-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.work-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.work-company {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.work-dates {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 4px 0;
+}
+
+.work-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.work-tasks {
+  margin-top: 12px;
+  padding-left: 16px;
+  list-style-type: disc;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.work-tasks li {
+  margin-bottom: 6px;
+}

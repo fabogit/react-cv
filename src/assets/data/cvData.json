@@ -18,18 +18,6 @@
         ],
         "title": "Education"
       },
-      "experience": [
-        {
-          "company": "Company",
-          "location": "City",
-          "period": "date from/to",
-          "role": "Position",
-          "tasks": [
-            "TASK1",
-            "TASK2"
-          ]
-        }
-      ],
       "header": {
         "contacts": [
           {
@@ -105,16 +93,45 @@
           "Teamwork",
           "Time management"
         ]
+      },
+      "work": {
+        "list": [
+          {
+            "company": "Spedizione dei Mille , Italia",
+            "date": [
+              "da 1860",
+              "a 1861"
+            ],
+            "logo": "logo.jpg",
+            "role": "Generale",
+            "tasks": [
+              "Vittoria garibaldina",
+              "Annessione del Regno delle Due Sicilie al Regno di Sardegna",
+              "Futura Unità d'Italia"
+            ]
+          },
+          {
+            "company": "Azienda, Citta",
+            "date": [
+              "da 2020",
+              "a 2024"
+            ],
+            "logo": "logo.jpg",
+            "role": "Posizione",
+            "tasks": []
+          }
+        ],
+        "title": "Esperienze Lavorative"
       }
     },
     "Italiano": {
       "education": {
         "list": [
           {
-            "logo": "logo.jpg",
             "date": "2015 - 2018",
             "description": "corso di studi",
-            "institute": "Bocconi, Milano"
+            "institute": "Bocconi, Milano",
+            "logo": "logo.jpg"
           }
         ],
         "title": "Istruzione"

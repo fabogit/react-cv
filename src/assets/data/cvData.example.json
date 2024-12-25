@@ -111,6 +111,7 @@
       "education": {
         "list": [
           {
+            "logo": "logo.jpg",
             "date": "2015 - 2018",
             "description": "corso di studi",
             "institute": "Bocconi, Milano"

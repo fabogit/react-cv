@@ -14,7 +14,7 @@ const LegalNotes: React.FC<LegalNotesProps> = ({ place, text, signature }) => {
   ).toString();
 
   return (
-    <section className="legal-notes card">
+    <section className="legal-notes">
       <hr />
       <p className="legal-text">{text}</p>
       <hr />

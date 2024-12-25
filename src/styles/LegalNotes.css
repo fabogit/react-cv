@@ -1,46 +1,7 @@
-/* .legal-notes {
-  padding: 1rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #333;
-  text-align: center;
-}
-
-.legal-text {
-  margin: 1rem 0;
-}
-
-.legal-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.legal-date {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.legal-signature {
-  width: 8rem;
-  height: auto;
-  object-fit: contain;
-}
-
-
-
-
- */
-
-
-
-
-
 .legal-notes {
-  padding: 1rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
   text-align: center;
 }
 
@@ -52,9 +13,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* Spazio tra data e firma */
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .legal-date {
@@ -63,7 +23,6 @@
 
 .legal-signature {
   width: 8rem;
-  /* Dimensione della firma */
   height: auto;
   object-fit: contain;
 }

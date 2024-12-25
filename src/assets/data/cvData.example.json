@@ -6,12 +6,14 @@
           {
             "date": "date",
             "description": "degree",
-            "institute": "University, city"
+            "institute": "University, city",
+            "logo": "logo.jpg"
           },
           {
             "date": "date",
             "description": "field",
-            "institute": "High school, city"
+            "institute": "High school, city",
+            "logo": "logo.jpg"
           }
         ],
         "title": "Education"
@@ -89,8 +91,8 @@
       },
       "legal": {
         "place": "Rome",
-        "text": "I authorize the processing of my personal data in accordance with the applicable regulations.",
-        "signature": "sign.png"
+        "signature": "sign.png",
+        "text": "I authorize the processing of my personal data in accordance with the applicable regulations."
       },
       "skills": {
         "hard": [
@@ -178,8 +180,8 @@
       },
       "legal": {
         "place": "Roma",
-        "text": "Autorizzo il trattamento dei miei dati",
-        "signature": "sign.png"
+        "signature": "sign.png",
+        "text": "Autorizzo il trattamento dei miei dati"
       },
       "skills": {
         "hard": [

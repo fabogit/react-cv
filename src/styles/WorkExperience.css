@@ -6,7 +6,6 @@
 
 .work-item {
   padding: 0 1rem;
-  background-color: #fff;
 }
 
 .work-top {
@@ -17,8 +16,8 @@
 }
 
 .work-logo {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 0.5rem;
   object-fit: cover;
   flex-shrink: 0;
@@ -29,26 +28,27 @@
 }
 
 .work-company {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
 
 .work-role {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
   margin: 0.25rem 0 0;
 }
 
 .work-dates {
   text-align: right;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #666;
 }
 
 .work-tasks {
   margin: 0.5rem 0;
   padding: 0 2rem;
-  list-style-type: circle;
-  line-height: 1.3rem;
+  list-style-type: disc;
+  line-height: 1rem;
+  font-size: 0.9rem;
 }

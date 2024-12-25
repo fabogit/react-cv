@@ -17,15 +17,32 @@
 
 button {
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  margin: 0.5rem;
   border: none;
   border-radius: 0.5rem;
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  transition: background-color 0.4s ease;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #002db3;
+  background-color: #0056b3;
+}
+
+button:last-child {
+  background-color: #dc3545;
+}
+
+button:last-child:hover {
+  background-color: #a71d2a;
+}
+
+#spacer-bot {
+  margin-bottom: 12rem;
+}
+
+#spacer-top {
+  margin-top: 1rem;
 }

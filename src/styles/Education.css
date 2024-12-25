@@ -1,18 +1,48 @@
+.education {
+  margin: 0;
+  padding: 0;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0;
+  margin: 0 0;
+  margin-bottom: 0.5rem;
+}
+
 .education-item {
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
 }
 
-.education-item h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
+.education-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-.education-item p {
-  margin: 0.5rem 0;
-  color: #555;
+.education-info {
+  flex-grow: 1;
 }
 
-.education-item span {
+.education-institute {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.education-description {
   font-size: 0.9rem;
-  color: #888;
+  margin: 0.25rem 0 0;
+}
+
+.education-date {
+  text-align: right;
+  font-size: 0.8rem;
 }

@@ -62,11 +62,13 @@ const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
       </div>
+      <hr />
       <div className="header-summary">
         {summary.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
       </div>
+      <hr />
     </header>
   );
 };

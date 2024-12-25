@@ -35,8 +35,8 @@
 }
 
 .contact-icon {
-  width: 20px;
-  height: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
   margin-right: 0.5rem;
   vertical-align: middle;
 }
@@ -66,5 +66,5 @@
 }
 
 .header-summary p {
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
 }

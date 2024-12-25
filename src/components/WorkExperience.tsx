@@ -7,8 +7,7 @@ interface WorkItem {
   logo: string;
   company: string;
   role: string;
-  startDate: string;
-  endDate: string;
+  date: string[];
   tasks: Task[];
 }
 
@@ -16,7 +15,6 @@ interface WorkExperienceProps {
   title: string;
   work: WorkItem[];
 }
-
 const WorkExperience: React.FC<WorkExperienceProps> = ({ title, work }) => {
   return (
     <section className="work-experience card">
@@ -30,19 +28,23 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ title, work }) => {
           return (
             <div key={index} className="work-item">
               <div className="work-header">
-                {/* Logo e Nome Azienda */}
                 <div className="work-top">
+                  {/* Colonna sinistra: Logo */}
                   <img
                     src={logoUrl}
                     alt={`${item.company} logo`}
                     className="work-logo"
                   />
-                  <div>
+                  {/* Colonna centrale: Nome Azienda e Ruolo */}
+                  <div className="work-info">
                     <h3 className="work-company">{item.company}</h3>
-                    <p className="work-dates">
-                      {item.startDate} - {item.endDate}
-                    </p>
                     <p className="work-role">{item.role}</p>
+                  </div>
+                  {/* Colonna destra: Date */}
+                  <div className="work-dates">
+                    <p>
+                      {item.date[1]} - {item.date[0]}
+                    </p>
                   </div>
                 </div>
               </div>

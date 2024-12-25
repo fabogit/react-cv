@@ -1,36 +1,31 @@
 .card {
   background-color: #fff;
-  /* Sfondo bianco */
   border: 1px solid #ddd;
-  /* Bordo sottile */
-  border-radius: 8px;
-  /* Angoli arrotondati */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Leggera ombreggiatura */
-  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   /* Spaziatura interna */
-  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
   /* Spaziatura tra le card */
+  margin-bottom: 1.5rem;
 }
 
 .card h2 {
   text-align: center;
   margin: 0 0;
-  padding: 0 0;
+  padding-bottom: 0.5rem;
 }
 
 button {
-  /* margin-top: 0.5rem; */
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.4s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #002db3;
 }

@@ -31,7 +31,7 @@ const App: React.FC = () => {
       <Education title={data.education.title} education={data.education.list} />
       <Languages title={data.languages.title} languages={data.languages.list} />
       <button onClick={handleLanguageToggle}>
-        ({language === "Italiano" ? "Italiano" : "English"})
+        {language === "Italiano" ? "English" : "Italiano"}
       </button>
     </div>
   );

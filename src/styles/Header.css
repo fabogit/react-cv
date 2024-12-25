@@ -8,6 +8,22 @@
   gap: 3rem;
 }
 
+a:link {
+  color: #003366;
+}
+
+a:visited {
+  color: #6a1b9a;
+}
+
+a:hover {
+  color: #c62828;
+}
+
+a:active {
+  color: #d32f2f;
+}
+
 .header-left,
 .header-right {
   flex: 1;

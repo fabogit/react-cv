@@ -38,9 +38,9 @@ const App: React.FC = () => {
       />
       <WorkExperience title={data.work.title} work={data.work.list} />
       {/* use spacers to help fit to the page */}
-      <div id="spacer-bot"></div>
+      {/* <div id="spacer-bot"></div>
       <hr />
-      <div id="spacer-top"></div>
+      <div id="spacer-top"></div> */}
 
       <Education title={data.education.title} education={data.education.list} />
       <Languages title={data.languages.title} languages={data.languages.list} />

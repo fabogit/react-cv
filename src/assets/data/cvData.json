@@ -4,16 +4,16 @@
       "education": {
         "list": [
           {
-            "date": "date",
-            "description": "degree",
-            "institute": "University, city",
-            "logo": "logo.jpg"
+            "date": "1880 - 1883",
+            "description": "Self-taught artist, focusing on the study of color and light",
+            "institute": "Various workshops, Paris, France",
+            "logo": "van_gogh_logo.png"
           },
           {
-            "date": "date",
-            "description": "field",
-            "institute": "High school, city",
-            "logo": "logo.jpg"
+            "date": "1879 - 1880",
+            "description": "Theology Studies (short-lived)",
+            "institute": "Theological School, Amsterdam, Netherlands",
+            "logo": "theology_logo.jpg"
           }
         ],
         "title": "Education"
@@ -22,116 +22,131 @@
         "contacts": [
           {
             "icon": "person.png",
-            "value": "NAME"
+            "value": "Vincent van Gogh"
           },
           {
             "icon": "job.png",
-            "value": "JOB"
+            "value": "Post-Impressionist Painter"
           },
           {
             "icon": "mail.png",
-            "link": "mailto:mail@gmail.com",
-            "value": "mail@gmail.com"
+            "link": "mailto:vincent@van-gogh.com",
+            "value": "vincent@van-gogh.com"
           },
           {
             "icon": "github.png",
-            "link": "https://github.com/",
-            "value": "GitHub→"
+            "link": "https://www.van-gogh-museum.nl/en/van-gogh",
+            "value": "Van Gogh Museum→"
           },
           {
             "icon": "linkedin.png",
-            "link": "http://www.linkedin.com/",
-            "value": "Linkedin→"
+            "link": "https://www.linkedin.com/in/van-gogh",
+            "value": "LinkedIn→"
           },
           {
             "icon": "phone.png",
-            "value": "123456789"
+            "value": "+33 1 2345 6789"
           },
           {
             "icon": "location.png",
-            "value": "CITY, Zip"
+            "value": "Arles, Provence, France"
           }
         ],
-        "image": "profile.jpg",
-        "name": "Smith",
+        "image": "van_gogh_self_portrait.png",
+        "name": "Vincent van Gogh",
         "summary": [
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis.",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis."
+          "I am a passionate artist, seeking to express the depth of human emotion through color and form. My work explores themes of suffering, nature, and spirituality, often portraying vivid landscapes and introspective portraits.",
+          "Through the use of bold, impassioned brush strokes and a vibrant color palette, I aim to create art that resonates on a deeply emotional level. My journey is one of personal exploration and the pursuit of truth in visual expression."
         ],
-        "title": "Job"
+        "title": "Post-Impressionist Artist"
       },
       "languages": {
         "list": [
           {
             "level": "Native",
-            "name": "Italiano"
+            "name": "Dutch"
           },
           {
-            "level": "Advanced(C1)",
-            "name": "English"
+            "level": "Fluent",
+            "name": "French"
           },
           {
-            "level": "Basic(A2)",
-            "name": "Spanish"
+            "level": "Intermediate",
+            "name": "German"
           }
         ],
-        "title": "Lingue"
+        "title": "Languages"
       },
       "legal": {
-        "place": "Rome",
-        "signature": "sign.png",
-        "text": "I authorize the processing of my personal data in accordance with the applicable regulations."
+        "place": "Arles",
+        "signature": "signature.webp",
+        "text": "I authorize the use of my personal works and likeness in accordance with the applicable regulations."
       },
       "skills": {
         "hard": [
-          "Git",
-          "Html (Handlebars, Ejs), Css (Bootstrap, Tailwindcss, Scss), Javascript/TS",
-          "Messaging system (Kafka), WebRTC, Websocket (Socket.io), Modern authentication (JWT, OAuth 2), ORM (Sequelize, Mongoose, TypeORM, Prisma)",
-          "Database: Sql (Mysql, Postgresql), NoSql(MongoDb, Redis), Graph(Neo4J). Cloud: Aws, Azure, Firebase"
+          "Oil painting techniques",
+          "Brushstroke expression",
+          "Color theory and emotional expression",
+          "Landscape and portrait composition",
+          "Art history and symbolism"
         ],
         "soft": [
-          "Teamwork",
-          "Time management"
+          "Creativity",
+          "Emotional resilience",
+          "Self-expression",
+          "Attention to detail",
+          "Introspection"
         ]
       },
       "work": {
         "list": [
           {
-            "company": "Spedizione dei Mille , Italia",
+            "logo": "arles.jpg",
+            "company": "Independent Artist",
+            "location": "Arles, France",
             "date": [
-              "da 1860",
-              "a 1861"
+              "1888",
+              "1890"
             ],
-            "logo": "logo.jpg",
-            "role": "Generale",
+            "role": "Painter",
             "tasks": [
-              "Vittoria garibaldina",
-              "Annessione del Regno delle Due Sicilie al Regno di Sardegna",
-              "Futura Unità d'Italia"
+              "Created over 200 artworks, including 'Sunflowers' and 'Starry Night'",
+              "Pioneered the use of expressive brush strokes and bold color contrasts",
+              "Influenced the Post-Impressionism movement with a focus on emotion and personal experience"
             ]
           },
           {
-            "company": "Azienda, Citta",
+            "logo": "Saint-Rémy-de-Provence.jpeg",
+            "company": "Independent Artist",
+            "location": "Saint-Rémy-de-Provence, France",
             "date": [
-              "da 2020",
-              "a 2024"
+              "1889",
+              "1890"
             ],
-            "logo": "logo.jpg",
-            "role": "Posizione",
-            "tasks": []
+            "role": "Painter",
+            "tasks": [
+              "Worked in isolation, creating iconic pieces such as 'Irises' and 'Wheatfield with Crows'",
+              "Explored themes of mental health and human suffering through vibrant colors"
+            ]
           }
         ],
-        "title": "Esperienze Lavorative"
+        "title": "Work"
       }
     },
     "Italiano": {
       "education": {
         "list": [
           {
-            "date": "2015 - 2018",
-            "description": "corso di studi",
-            "institute": "Bocconi, Milano",
-            "logo": "logo.jpg"
+            "date": "1880 - 1883",
+            "description": "Artista autodidatta, studio sul colore e sulla luce",
+            "institute": "Vari atelier, Parigi, Francia",
+            "logo": "van_gogh_logo.png"
+          },
+          {
+            "date": "1879 - 1880",
+            "description": "Studi teologici (brevissima carriera)",
+            "institute": "Scuola Teologica, Amsterdam, Paesi Bassi",
+            "logo": "theology_logo.jpg"
           }
         ],
         "title": "Istruzione"
@@ -140,107 +155,115 @@
         "contacts": [
           {
             "icon": "person.png",
-            "value": "Giuseppe Garibaldi"
+            "value": "Vincent van Gogh"
           },
           {
             "icon": "job.png",
-            "value": "Generale"
+            "value": "Pittore Post-Impressionista"
           },
           {
             "icon": "mail.png",
-            "link": "mailto:email@gmail.com",
-            "value": "email@gmail.com"
+            "link": "mailto:vincent@van-gogh.com",
+            "value": "vincent@van-gogh.com"
           },
           {
             "icon": "github.png",
-            "link": "https://github.com/",
-            "value": "GitHub→"
+            "link": "https://www.van-gogh-museum.nl/en/van-gogh",
+            "value": "Museo van Gogh→"
           },
           {
             "icon": "linkedin.png",
-            "link": "http://www.linkedin.com/",
-            "value": "Linkedin→"
+            "link": "https://www.linkedin.com/in/van-gogh",
+            "value": "LinkedIn→"
           },
           {
             "icon": "phone.png",
-            "value": "123456789"
+            "value": "+33 1 2345 6789"
           },
           {
             "icon": "location.png",
-            "value": "CITY, Zip"
+            "value": "Arles, Provenza, Francia"
           }
         ],
-        "image": "profile.jpg",
-        "name": "Nome Cognome",
+        "image": "van_gogh_self_portrait.png",
+        "name": "Vincent van Gogh",
         "summary": [
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis.",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis.",
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis."
+          "Sono un artista appassionato, che cerca di esprimere la profondità dell'emozione umana attraverso il colore e la forma. Il mio lavoro esplora temi come la sofferenza, la natura e la spiritualità, rappresentando paesaggi vividi e ritratti introspettivi.",
+          "Con l'uso di pennellate forti e un'ampia tavolozza di colori, cerco di creare opere che risuonano a livello emotivo. Il mio percorso è una ricerca personale e la continua ricerca della verità nell'espressione visiva."
         ],
-        "title": "job title"
+        "title": "Artista Post-Impressionista"
       },
       "languages": {
         "list": [
           {
             "level": "Madrelingua",
-            "name": "Italiano"
+            "name": "Olandese"
           },
           {
-            "level": "Avanzato (C1)",
-            "name": "Inglese"
+            "level": "Fluente",
+            "name": "Francese"
           },
           {
-            "level": "Elementare (A2)",
-            "name": "Spagnolo"
+            "level": "Intermedio",
+            "name": "Tedesco"
           }
         ],
         "title": "Lingue"
       },
       "legal": {
-        "place": "Roma",
-        "signature": "sign.png",
-        "text": "Autorizzo il trattamento dei miei dati"
+        "place": "Arles",
+        "signature": "signature.webp",
+        "text": "Autorizzo l'uso delle mie opere e della mia immagine in conformità alle normative vigenti."
       },
       "skills": {
         "hard": [
-          "Git",
-          "Html (Handlebars, Ejs), Css (Bootstrap, Tailwindcss, Scss), Javascript/TS",
-          "Messaging system (Kafka), WebRTC, Websocket (Socket.io), Modern authentication (JWT, OAuth 2), ORM (Sequelize, Mongoose, TypeORM, Prisma)",
-          "Database: Sql (Mysql, Postgresql), NoSql(MongoDb, Redis), Graph(Neo4J). Cloud: Aws, Azure, Firebase"
+          "Tecniche di pittura a olio",
+          "Espressione con pennellate",
+          "Teoria del colore e espressione emotiva",
+          "Composizione di paesaggi e ritratti",
+          "Storia dell'arte e simbolismo"
         ],
         "soft": [
-          "Qui si fa l'Italia o si muore",
-          "Obbedisco!"
+          "Creatività",
+          "Resilienza emotiva",
+          "Auto-espressione",
+          "Attenzione ai dettagli",
+          "Introspezione"
         ]
       },
       "work": {
         "list": [
           {
-            "company": "Spedizione dei Mille , Italia",
+            "logo": "arles.jpg",
+            "company": "Artista indipendente",
+            "location": "Arles, Francia",
             "date": [
-              "da 1860",
-              "a 1861"
+              "1888",
+              "1890"
             ],
-            "logo": "logo.jpg",
-            "role": "Generale",
+            "role": "Pittore",
             "tasks": [
-              "Vittoria garibaldina",
-              "Annessione del Regno delle Due Sicilie al Regno di Sardegna",
-              "Futura Unità d'Italia"
+              "Creò oltre 200 opere d'arte, tra cui 'Girasoli' e 'Notte stellata'",
+              "Pionierò nell'uso di pennellate espressive e contrasti di colori audaci",
+              "Influenzò il movimento Post-Impressionista con un focus sull'emozione e sull'esperienza personale"
             ]
           },
           {
-            "company": "Azienda, Citta",
+            "logo": "Saint-Rémy-de-Provence.jpeg",
+            "company": "Artista indipendente",
+            "location": "Saint-Rémy-de-Provence, Francia",
             "date": [
-              "da 2020",
-              "a 2024"
+              "1889",
+              "1890"
             ],
-            "logo": "logo.jpg",
-            "role": "Posizione",
-            "tasks": []
+            "role": "Pittore",
+            "tasks": [
+              "Lavorò in isolamento, creando opere iconiche come 'Iris' e 'Campo di grano con corvi'",
+              "Esplorò temi legati alla salute mentale e alla sofferenza umana attraverso colori vivaci"
+            ]
           }
         ],
-        "title": "Esperienze Lavorative"
+        "title": "Lavoro"
       }
     }
   }

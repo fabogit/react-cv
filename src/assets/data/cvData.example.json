@@ -1,0 +1,227 @@
+{
+  "language": {
+    "English": {
+      "education": {
+        "list": [
+          {
+            "date": "date",
+            "description": "degree",
+            "institute": "University, city"
+          },
+          {
+            "date": "date",
+            "description": "field",
+            "institute": "High school, city"
+          }
+        ],
+        "title": "Education"
+      },
+      "experience": [
+        {
+          "company": "Company",
+          "location": "City",
+          "period": "date from/to",
+          "role": "Position",
+          "tasks": [
+            "TASK1",
+            "TASK2"
+          ]
+        }
+      ],
+      "header": {
+        "contacts": [
+          {
+            "icon": "person.png",
+            "value": "NAME"
+          },
+          {
+            "icon": "job.png",
+            "value": "JOB"
+          },
+          {
+            "icon": "mail.png",
+            "link": "mailto:mail@gmail.com",
+            "value": "mail@gmail.com"
+          },
+          {
+            "icon": "github.png",
+            "link": "https://github.com/",
+            "value": "GitHub→"
+          },
+          {
+            "icon": "linkedin.png",
+            "link": "http://www.linkedin.com/",
+            "value": "Linkedin→"
+          },
+          {
+            "icon": "phone.png",
+            "value": "123456789"
+          },
+          {
+            "icon": "location.png",
+            "value": "CITY, Zip"
+          }
+        ],
+        "image": "profile.jpg",
+        "name": "Smith",
+        "summary": [
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis."
+        ],
+        "title": "Job"
+      },
+      "languages": {
+        "list": [
+          {
+            "level": "Native",
+            "name": "Italiano"
+          },
+          {
+            "level": "Advanced(C1)",
+            "name": "English"
+          },
+          {
+            "level": "Basic(A2)",
+            "name": "Spanish"
+          }
+        ],
+        "title": "Lingue"
+      },
+      "legal": {
+        "place": "Rome",
+        "text": "I authorize the processing of my personal data in accordance with the applicable regulations.",
+        "signature": "sign.png"
+      },
+      "skills": {
+        "hard": [
+          "Git",
+          "Html (Handlebars, Ejs), Css (Bootstrap, Tailwindcss, Scss), Javascript/TS",
+          "Messaging system (Kafka), WebRTC, Websocket (Socket.io), Modern authentication (JWT, OAuth 2), ORM (Sequelize, Mongoose, TypeORM, Prisma)",
+          "Database: Sql (Mysql, Postgresql), NoSql(MongoDb, Redis), Graph(Neo4J). Cloud: Aws, Azure, Firebase"
+        ],
+        "soft": [
+          "Teamwork",
+          "Time management"
+        ]
+      }
+    },
+    "Italiano": {
+      "education": {
+        "list": [
+          {
+            "date": "2015 - 2018",
+            "description": "corso di studi",
+            "institute": "Bocconi, Milano"
+          }
+        ],
+        "title": "Istruzione"
+      },
+      "header": {
+        "contacts": [
+          {
+            "icon": "person.png",
+            "value": "Giuseppe Garibaldi"
+          },
+          {
+            "icon": "job.png",
+            "value": "Generale"
+          },
+          {
+            "icon": "mail.png",
+            "link": "mailto:email@gmail.com",
+            "value": "email@gmail.com"
+          },
+          {
+            "icon": "github.png",
+            "link": "https://github.com/",
+            "value": "GitHub→"
+          },
+          {
+            "icon": "linkedin.png",
+            "link": "http://www.linkedin.com/",
+            "value": "Linkedin→"
+          },
+          {
+            "icon": "phone.png",
+            "value": "123456789"
+          },
+          {
+            "icon": "location.png",
+            "value": "CITY, Zip"
+          }
+        ],
+        "image": "profile.jpg",
+        "name": "Nome Cognome",
+        "summary": [
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore a officiis maxime culpa magni sed qui eum quia minus veritatis quaerat quo ullam in libero, facilis ipsam magnam soluta quis."
+        ],
+        "title": "job title"
+      },
+      "languages": {
+        "list": [
+          {
+            "level": "Madrelingua",
+            "name": "Italiano"
+          },
+          {
+            "level": "Avanzato (C1)",
+            "name": "Inglese"
+          },
+          {
+            "level": "Elementare (A2)",
+            "name": "Spagnolo"
+          }
+        ],
+        "title": "Lingue"
+      },
+      "legal": {
+        "place": "Roma",
+        "text": "Autorizzo il trattamento dei miei dati",
+        "signature": "sign.png"
+      },
+      "skills": {
+        "hard": [
+          "Git",
+          "Html (Handlebars, Ejs), Css (Bootstrap, Tailwindcss, Scss), Javascript/TS",
+          "Messaging system (Kafka), WebRTC, Websocket (Socket.io), Modern authentication (JWT, OAuth 2), ORM (Sequelize, Mongoose, TypeORM, Prisma)",
+          "Database: Sql (Mysql, Postgresql), NoSql(MongoDb, Redis), Graph(Neo4J). Cloud: Aws, Azure, Firebase"
+        ],
+        "soft": [
+          "Qui si fa l'Italia o si muore",
+          "Obbedisco!"
+        ]
+      },
+      "work": {
+        "list": [
+          {
+            "company": "Spedizione dei Mille , Italia",
+            "date": [
+              "da 1860",
+              "a 1861"
+            ],
+            "logo": "logo.jpg",
+            "role": "Generale",
+            "tasks": [
+              "Vittoria garibaldina",
+              "Annessione del Regno delle Due Sicilie al Regno di Sardegna",
+              "Futura Unità d'Italia"
+            ]
+          },
+          {
+            "company": "Azienda, Citta",
+            "date": [
+              "da 2020",
+              "a 2024"
+            ],
+            "logo": "logo.jpg",
+            "role": "Posizione",
+            "tasks": []
+          }
+        ],
+        "title": "Esperienze Lavorative"
+      }
+    }
+  }
+}

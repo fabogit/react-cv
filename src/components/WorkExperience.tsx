@@ -1,4 +1,3 @@
-import React from "react";
 import "./../styles/WorkExperience.css";
 
 type Task = string;
@@ -43,7 +42,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ title, work }) => {
                   {/* Colonna destra: Date */}
                   <div className="work-dates">
                     <p>
-                      {item.date[1]} - {item.date[0]}
+                      {item.date[0]} {item.date[1]}
                     </p>
                   </div>
                 </div>

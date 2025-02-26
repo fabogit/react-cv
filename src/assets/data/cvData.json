@@ -96,18 +96,22 @@
           "Self-expression",
           "Attention to detail",
           "Introspection"
-        ]
+        ],
+        "title": {
+          "hard": "Hard Skills",
+          "soft": "Soft Skills"
+        }
       },
       "work": {
         "list": [
           {
-            "logo": "arles.jpg",
             "company": "Independent Artist",
-            "location": "Arles, France",
             "date": [
               "1888",
               "1890"
             ],
+            "location": "Arles, France",
+            "logo": "arles.jpg",
             "role": "Painter",
             "tasks": [
               "Created over 200 artworks, including 'Sunflowers' and 'Starry Night'",
@@ -116,13 +120,13 @@
             ]
           },
           {
-            "logo": "Saint-Rémy-de-Provence.jpeg",
             "company": "Independent Artist",
-            "location": "Saint-Rémy-de-Provence, France",
             "date": [
               "1889",
               "1890"
             ],
+            "location": "Saint-Rémy-de-Provence, France",
+            "logo": "Saint-Rémy-de-Provence.jpeg",
             "role": "Painter",
             "tasks": [
               "Worked in isolation, creating iconic pieces such as 'Irises' and 'Wheatfield with Crows'",
@@ -229,18 +233,22 @@
           "Auto-espressione",
           "Attenzione ai dettagli",
           "Introspezione"
-        ]
+        ],
+        "title": {
+          "hard": "Competenze Tecniche",
+          "soft": "Competenze Personali"
+        }
       },
       "work": {
         "list": [
           {
-            "logo": "arles.jpg",
             "company": "Artista indipendente",
-            "location": "Arles, Francia",
             "date": [
               "1888",
               "1890"
             ],
+            "location": "Arles, Francia",
+            "logo": "arles.jpg",
             "role": "Pittore",
             "tasks": [
               "Creò oltre 200 opere d'arte, tra cui 'Girasoli' e 'Notte stellata'",
@@ -249,13 +257,13 @@
             ]
           },
           {
-            "logo": "Saint-Rémy-de-Provence.jpeg",
             "company": "Artista indipendente",
-            "location": "Saint-Rémy-de-Provence, Francia",
             "date": [
               "1889",
               "1890"
             ],
+            "location": "Saint-Rémy-de-Provence, Francia",
+            "logo": "Saint-Rémy-de-Provence.jpeg",
             "role": "Pittore",
             "tasks": [
               "Lavorò in isolamento, creando opere iconiche come 'Iris' e 'Campo di grano con corvi'",

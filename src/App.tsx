@@ -44,8 +44,8 @@ const App: React.FC = () => {
 
       <Education title={data.education.title} education={data.education.list} />
       <Languages title={data.languages.title} languages={data.languages.list} />
-      <Skills title="Soft Skills" skills={data.skills.soft} />
-      <Skills title="Hard Skills" skills={data.skills.hard} />
+      <Skills title={data.skills.title.soft}  skills={data.skills.soft} />
+      <Skills title={data.skills.title.hard}  skills={data.skills.hard} />
       <LegalNotes
         place={data.legal.place}
         text={data.legal.text}

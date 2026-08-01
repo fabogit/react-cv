@@ -1,56 +1,60 @@
+import React from "react";
 import "./../styles/Header.css";
+import { ContactItem } from "../types/cv";
+import { getAssetUrl } from "../utils/assets";
 
-type Contact = {
-  icon: string;
-  link?: string;
-  value: string;
-};
-
-interface HeaderProps {
-  contacts: Contact[];
+/**
+ * Props for the Header component.
+ */
+export interface HeaderProps {
+  /** Array of contact details */
+  contacts: ContactItem[];
+  /** Summary paragraphs */
   summary: string[];
+  /** Profile image filename */
   image: string;
+  /** Full name of the candidate */
   name: string;
+  /** Professional title headline */
   title: string;
 }
 
+/**
+ * Header component displaying candidate identity (h1, h2), profile picture, contact list, and summary.
+ */
 const Header: React.FC<HeaderProps> = ({
-  //   name,
-  //   title,
+  name,
+  title,
   contacts,
   image,
   summary,
 }) => {
-  const imageUrl = new URL(
-    `../assets/img/${image}`,
-    import.meta.url
-  ).toString();
-
-  const getIconUrl = (icon: string) => {
-    return new URL(`../assets/icons/header/${icon}`, import.meta.url).toString();
-  };
+  const imageUrl = getAssetUrl("profile", image);
 
   return (
     <header className="header card">
       <div className="header-container">
-        {/* Colonna sinistra */}
+        {/* Left column: Profile Picture & Primary Info */}
         <div className="header-left">
-          {/* <h1>{name}</h1> */}
-          <img src={imageUrl} alt={`${name}'s profile`} />
+          <img src={imageUrl} alt={`${name} - ${title}`} />
+          <div className="header-identity">
+            <h1 className="header-name">{name}</h1>
+            <h2 className="header-title">{title}</h2>
+          </div>
         </div>
-        {/* Colonna destra */}
+        {/* Right column: Contacts */}
         <div className="header-right">
-          {/* <h2>{title}</h2> */}
           <div className="header-contacts">
             {contacts.map((contact, index) => (
-              <p key={index}>
+              <p key={`${contact.icon}-${index}`}>
                 <img
-                  src={getIconUrl(contact.icon)}
-                  alt={`Contact icon ${index}`}
+                  src={getAssetUrl("headerIcon", contact.icon)}
+                  alt=""
+                  aria-hidden="true"
                   className="contact-icon"
                 />
                 {contact.link ? (
-                  <a href={contact.link} className="contact-link">
+                  <a href={contact.link} className="contact-link" target="_blank" rel="noopener noreferrer">
                     {contact.value}
                   </a>
                 ) : (

@@ -21,14 +21,6 @@
       "header": {
         "contacts": [
           {
-            "icon": "person.png",
-            "value": "Vincent van Gogh"
-          },
-          {
-            "icon": "job.png",
-            "value": "Post-Impressionist Painter"
-          },
-          {
             "icon": "mail.png",
             "link": "mailto:vincent@van-gogh.com",
             "value": "vincent@van-gogh.com"
@@ -157,14 +149,6 @@
       },
       "header": {
         "contacts": [
-          {
-            "icon": "person.png",
-            "value": "Vincent van Gogh"
-          },
-          {
-            "icon": "job.png",
-            "value": "Pittore Post-Impressionista"
-          },
           {
             "icon": "mail.png",
             "link": "mailto:vincent@van-gogh.com",

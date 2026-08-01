@@ -6,7 +6,8 @@
 }
 
 .legal-text {
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
+  font-size: 0.45rem;
 }
 
 .legal-footer {

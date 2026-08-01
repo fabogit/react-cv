@@ -1,31 +1,32 @@
+import React from "react";
 import "./../styles/Education.css";
+import { EducationItem, formatCvDate } from "../types/cv";
+import { getAssetUrl } from "../utils/assets";
 
-type EducationItem = {
-  institute: string;
-  description: string;
-  date: string;
-  logo: string;
-};
-
-interface EducationProps {
+/**
+ * Props for the Education component.
+ */
+export interface EducationProps {
+  /** Section title (e.g., "Education", "Istruzione") */
   title: string;
+  /** Array of education entries */
   education: EducationItem[];
 }
 
+/**
+ * Education component rendering academic institutions, credentials, and dates.
+ */
 const Education: React.FC<EducationProps> = ({ title, education }) => {
   return (
     <section className="education card">
       <h2>{title}</h2>
       <ul className="education-list">
         {education.map((item, index) => {
-          const logoUrl = new URL(
-            `../assets/icons/school/${item.logo}`,
-            import.meta.url
-          ).toString();
-          console.log(logoUrl);
+          const logoUrl = getAssetUrl("schoolLogo", item.logo);
+          const itemKey = `${item.institute}-${index}`;
 
           return (
-            <li key={index} className="education-item">
+            <li key={itemKey} className="education-item">
               <img
                 src={logoUrl}
                 alt={`${item.institute} logo`}
@@ -35,7 +36,7 @@ const Education: React.FC<EducationProps> = ({ title, education }) => {
                 <h3 className="education-institute">{item.institute}</h3>
                 <p className="education-description">
                   {item.description}
-                  <span className="education-date">{item.date}</span>
+                  <span className="education-date">{formatCvDate(item.date)}</span>
                 </p>
               </div>
             </li>

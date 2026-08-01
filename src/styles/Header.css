@@ -8,36 +8,36 @@
   gap: 3rem;
 }
 
-a:link {
+.contact-link:link {
   color: #003366;
 }
 
-a:visited {
+.contact-link:visited {
   color: #6a1b9a;
 }
 
-a:hover {
+.contact-link:hover {
   color: #c62828;
 }
 
-a:active {
+.contact-link:active {
   color: #d32f2f;
 }
 
 .header-left,
 .header-right {
   flex: 1;
-  /* Ogni colonna occupa uno spazio equo */
+  /* Each column occupies equal space */
   display: flex;
   flex-direction: column;
-  /* Contenuto disposto in verticale */
+  /* Vertical content layout */
   align-items: center;
-  /* Allinea il contenuto al centro per la colonna sinistra */
+  /* Center-align content for left column */
 }
 
 .header-right {
   align-items: flex-start;
-  /* Allinea il contenuto a sinistra */
+  /* Left-align content */
 }
 
 .header-left h1,

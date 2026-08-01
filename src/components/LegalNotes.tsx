@@ -1,20 +1,28 @@
+import React from "react";
 import "./../styles/LegalNotes.css";
+import { getAssetUrl } from "../utils/assets";
 
-interface LegalNotesProps {
+/**
+ * Props for the LegalNotes component.
+ */
+export interface LegalNotesProps {
+  /** Location/city where the CV is issued */
   place: string;
+  /** Legal consent text for GDPR / privacy compliance */
   text: string;
+  /** Signature image filename */
   signature: string;
 }
 
+/**
+ * LegalNotes component rendering GDPR consent text, issuance date, location, and signature image.
+ */
 const LegalNotes: React.FC<LegalNotesProps> = ({ place, text, signature }) => {
   const currentDate = new Date().toISOString().split("T")[0];
-  const signatureUrl = new URL(
-    `../assets/img/${signature}`,
-    import.meta.url
-  ).toString();
+  const signatureUrl = getAssetUrl("legalSignature", signature);
 
   return (
-    <section className="legal-notes">
+    <footer className="legal-notes card">
       <hr />
       <p className="legal-text">{text}</p>
       <hr />
@@ -22,9 +30,11 @@ const LegalNotes: React.FC<LegalNotesProps> = ({ place, text, signature }) => {
         <p className="legal-date">
           {place}, {currentDate}
         </p>
-        <img src={signatureUrl} alt="Firma" className="legal-signature" />
+        {signatureUrl && (
+          <img src={signatureUrl} alt="Signature" className="legal-signature" />
+        )}
       </div>
-    </section>
+    </footer>
   );
 };
 

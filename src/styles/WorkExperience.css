@@ -33,6 +33,12 @@
   margin: 0;
 }
 
+.work-location {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #666);
+}
+
 .work-role {
   font-size: 0.9rem;
   color: #555;

@@ -1,53 +1,57 @@
+import React from "react";
 import "./../styles/WorkExperience.css";
+import { WorkItem, formatCvDate } from "../types/cv";
+import { getAssetUrl } from "../utils/assets";
 
-type Task = string;
-
-interface WorkItem {
-  logo: string;
-  company: string;
-  role: string;
-  date: string[];
-  tasks: Task[];
-}
-
-interface WorkExperienceProps {
+/**
+ * Props for the WorkExperience component.
+ */
+export interface WorkExperienceProps {
+  /** Section title (e.g., "Work Experience", "Esperienza Lavorativa") */
   title: string;
+  /** Array of work experience entries */
   work: WorkItem[];
 }
+
+/**
+ * WorkExperience component rendering professional roles, company logos, locations, dates, and bullet tasks.
+ */
 const WorkExperience: React.FC<WorkExperienceProps> = ({ title, work }) => {
   return (
     <section className="work-experience card">
       <h2>{title}</h2>
       <div className="work-list">
         {work.map((item, index) => {
-          const logoUrl = new URL(
-            `../assets/icons/work/${item.logo}`,
-            import.meta.url
-          ).toString();
+          const logoUrl = getAssetUrl("workLogo", item.logo);
+          const itemKey = `${item.company}-${item.role}-${index}`;
+
           return (
-            <div key={index} className="work-item">
+            <div key={itemKey} className="work-item">
               <div className="work-header">
                 <div className="work-top">
-                  {/* Colonna sinistra: Logo */}
+                  {/* Left column: Logo */}
                   <img
                     src={logoUrl}
                     alt={`${item.company} logo`}
                     className="work-logo"
                   />
-                  {/* Colonna centrale: Nome Azienda e Ruolo */}
+                  {/* Center column: Company Name, Role, Location */}
                   <div className="work-info">
-                    <h3 className="work-company">{item.company}</h3>
+                    <h3 className="work-company">
+                      {item.company}
+                      {item.location && (
+                        <span className="work-location"> • {item.location}</span>
+                      )}
+                    </h3>
                     <p className="work-role">{item.role}</p>
                   </div>
-                  {/* Colonna destra: Date */}
+                  {/* Right column: Dates */}
                   <div className="work-dates">
-                    <p>
-                      {item.date[0]} {item.date[1]}
-                    </p>
+                    <p>{formatCvDate(item.date)}</p>
                   </div>
                 </div>
               </div>
-              {/* Lista dei Task */}
+              {/* Task list */}
               <ul className="work-tasks">
                 {item.tasks.map((task, taskIndex) => (
                   <li key={taskIndex}>{task}</li>

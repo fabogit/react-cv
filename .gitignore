@@ -28,3 +28,7 @@ src/assets/img/profile.jpg
 src/assets/img/sign.png
 src/assets/icons/_work
 src/assets/_img
+
+# AI Agents
+.agents
+.skills-lock.json

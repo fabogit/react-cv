@@ -14,12 +14,6 @@
   margin-bottom: 1.5rem;
 }
 
-.work-item,
-.education-item {
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
 .card h2 {
   text-align: center;
   margin: 0;
@@ -72,6 +66,10 @@
 }
 
 @media print {
+  @page {
+    margin: 0.5rem;
+  }
+
   .no-print {
     display: none !important;
   }

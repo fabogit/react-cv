@@ -18,8 +18,8 @@ export interface HeaderData {
   name: string;
   /** Professional title / role headline */
   title: string;
-  /** Profile image filename located in src/assets/_img/ */
-  image: string;
+  /** Optional profile image filename located in src/assets/_img/ */
+  image?: string;
   /** List of contact entries */
   contacts: ContactItem[];
   /** Summary paragraphs describing professional background */

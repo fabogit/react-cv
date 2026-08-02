@@ -16,6 +16,7 @@ const App: React.FC = () => {
   const localization = ["Italiano", "English"] as const;
   const [language, setLanguage] =
     useState<(typeof localization)[number]>("Italiano");
+  const [showPhoto, setShowPhoto] = useState<boolean>(true);
   const data = cvData.language[language];
 
   const handleLanguageToggle = () => {
@@ -24,18 +25,49 @@ const App: React.FC = () => {
     setLanguage(localization[nextIndex]);
   };
 
+  const handlePhotoToggle = () => {
+    setShowPhoto((prev) => !prev);
+  };
+
   const handlePrint = () => {
     window.print();
   };
 
   return (
     <div className="cv-container">
+      <nav className="controls no-print" aria-label="CV Controls">
+        <button
+          type="button"
+          onClick={handleLanguageToggle}
+          aria-label={`Switch language to ${language === "Italiano" ? "English" : "Italiano"}`}
+        >
+          {language === "Italiano" ? "English" : "Italiano"}
+        </button>
+        <button
+          type="button"
+          onClick={handlePhotoToggle}
+          aria-label="Toggle profile photo"
+          title="Toggle profile photo"
+        >
+          {showPhoto ? "❌📷" : "📷"}
+        </button>
+        <button
+          type="button"
+          onClick={handlePrint}
+          aria-label="Print CV"
+          title="Print CV"
+        >
+          🖨️ <span className="sr-only">Print</span>
+        </button>
+      </nav>
+
       <Header
         name={data.header.name}
         title={data.header.title}
         contacts={data.header.contacts}
         image={data.header.image}
         summary={data.header.summary}
+        showImage={showPhoto}
       />
       <main className="cv-main">
         <WorkExperience title={data.work.title} work={data.work.list} />
@@ -52,24 +84,6 @@ const App: React.FC = () => {
         text={data.legal.text}
         signature={data.legal.signature}
       />
-
-      <nav className="controls no-print" aria-label="CV Controls">
-        <button
-          type="button"
-          onClick={handleLanguageToggle}
-          aria-label={`Switch language to ${language === "Italiano" ? "English" : "Italiano"}`}
-        >
-          {language === "Italiano" ? "English" : "Italiano"}
-        </button>
-        <button
-          type="button"
-          onClick={handlePrint}
-          aria-label="Print CV"
-          title="Print CV"
-        >
-          🖨️ <span className="sr-only">Print</span>
-        </button>
-      </nav>
     </div>
   );
 };

@@ -14,7 +14,7 @@ export interface EducationProps {
 }
 
 /**
- * Education component rendering academic institutions, credentials, and dates.
+ * Education component rendering academic institutions, credentials, locations, and dates.
  */
 const Education: React.FC<EducationProps> = ({ title, education }) => {
   return (
@@ -33,7 +33,12 @@ const Education: React.FC<EducationProps> = ({ title, education }) => {
                 className="education-logo"
               />
               <div className="education-info">
-                <h3 className="education-institute">{item.institute}</h3>
+                <h3 className="education-institute">
+                  {item.institute}
+                  {item.location && (
+                    <span className="education-location"> • {item.location}</span>
+                  )}
+                </h3>
                 <p className="education-description">
                   {item.description}
                   <span className="education-date">{formatCvDate(item.date)}</span>

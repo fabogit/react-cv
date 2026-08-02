@@ -1,73 +1,88 @@
+import React from "react";
 import "./../styles/Header.css";
+import { ContactItem } from "../types/cv";
+import { getAssetUrl } from "../utils/assets";
 
-type Contact = {
-  icon: string;
-  link?: string;
-  value: string;
-};
-
-interface HeaderProps {
-  contacts: Contact[];
+/**
+ * Props for the Header component.
+ */
+export interface HeaderProps {
+  /** Array of contact details */
+  contacts: ContactItem[];
+  /** Summary paragraphs */
   summary: string[];
-  image: string;
+  /** Optional profile image filename */
+  image?: string;
+  /** Full name of the candidate */
   name: string;
+  /** Professional title headline */
   title: string;
+  /** Optional flag to toggle photo rendering (defaults to true) */
+  showImage?: boolean;
 }
 
+/**
+ * Header component displaying candidate identity (h1, h2), optional profile picture, contact list, and summary.
+ */
 const Header: React.FC<HeaderProps> = ({
-  //   name,
-  //   title,
+  name,
+  title,
   contacts,
   image,
   summary,
+  showImage = true,
 }) => {
-  const imageUrl = new URL(
-    `../assets/img/${image}`,
-    import.meta.url
-  ).toString();
-
-  const getIconUrl = (icon: string) => {
-    return new URL(`../assets/icons/header/${icon}`, import.meta.url).toString();
-  };
+  const imageUrl = image ? getAssetUrl("profile", image) : "";
+  const shouldRenderImage = Boolean(showImage && imageUrl);
 
   return (
     <header className="header card">
-      <div className="header-container">
-        {/* Colonna sinistra */}
-        <div className="header-left">
-          {/* <h1>{name}</h1> */}
-          <img src={imageUrl} alt={`${name}'s profile`} />
-        </div>
-        {/* Colonna destra */}
-        <div className="header-right">
-          {/* <h2>{title}</h2> */}
-          <div className="header-contacts">
-            {contacts.map((contact, index) => (
-              <p key={index}>
-                <img
-                  src={getIconUrl(contact.icon)}
-                  alt={`Contact icon ${index}`}
-                  className="contact-icon"
-                />
-                {contact.link ? (
-                  <a href={contact.link} className="contact-link">
-                    {contact.value}
-                  </a>
-                ) : (
-                  <span>{contact.value}</span>
-                )}
-              </p>
-            ))}
-          </div>
+      <div className="header-top">
+        {shouldRenderImage && (
+          <img
+            src={imageUrl}
+            alt={`${name} - ${title}`}
+            className="header-avatar"
+          />
+        )}
+        <div className="header-identity">
+          <h1 className="header-name">{name}</h1>
+          <h2 className="header-title">{title}</h2>
         </div>
       </div>
-      <hr />
+
+      <div className="header-contacts">
+        {contacts.map((contact, index) => (
+          <span key={`${contact.icon}-${index}`} className="header-contact-item">
+            <img
+              src={getAssetUrl("headerIcon", contact.icon)}
+              alt=""
+              aria-hidden="true"
+              className="contact-icon"
+            />
+            {contact.link ? (
+              <a
+                href={contact.link}
+                className="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {contact.value}
+              </a>
+            ) : (
+              <span>{contact.value}</span>
+            )}
+          </span>
+        ))}
+      </div>
+
+      <hr className="header-divider" />
+
       <div className="header-summary">
         {summary.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
       </div>
-      <hr />
     </header>
   );
 };

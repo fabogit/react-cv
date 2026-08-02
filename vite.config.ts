@@ -1,33 +1,28 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 import compression from 'vite-plugin-compression';
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => {
-  return {
-    plugins: [
-      react(),
-      compression({
-        algorithm: 'gzip', // Può essere 'gzip' o 'brotliCompress'
-        ext: '.gz', // Estensione dei file compressi
-        deleteOriginFile: false, // Mantiene anche i file originali
-        threshold: 10240, // Comprimi solo file più grandi di 10KB
-      }),
-      compression({
-        algorithm: 'brotliCompress', // Abilita anche Brotli
-        ext: '.br',
-        deleteOriginFile: false,
-        threshold: 10240,
-      }),
-    ],
-    esbuild: {
-      // Rimuove i console.log e debugger solo in produzione
-      drop: mode === 'production' ? ['console', 'debugger'] : [],
-    },
-    build: {
-      minify: 'esbuild', // Usa esbuild per la minificazione
-      cssCodeSplit: true, // Ottimizza i CSS generando file separati
-      sourcemap: false, // Disabilita le sourcemap in produzione
-    },
-  };
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+    compression({
+      algorithm: 'gzip', // Can be 'gzip' or 'brotliCompress'
+      ext: '.gz', // Extension of compressed files
+      deleteOriginFile: false, // Retain original uncompressed files
+      threshold: 10240, // Compress only files larger than 10KB
+    }),
+    compression({
+      algorithm: 'brotliCompress', // Enable Brotli compression as well
+      ext: '.br',
+      deleteOriginFile: false,
+      threshold: 10240,
+    }),
+  ],
+  build: {
+    cssCodeSplit: true, // Optimize CSS by generating separate files
+    sourcemap: false, // Disable sourcemaps in production
+  },
 });

@@ -6,13 +6,15 @@
           {
             "date": "1880 - 1883",
             "description": "Self-taught artist, focusing on the study of color and light",
-            "institute": "Various workshops, Paris, France",
+            "institute": "Various workshops",
+            "location": "Paris, France",
             "logo": "van_gogh_logo.png"
           },
           {
             "date": "1879 - 1880",
             "description": "Theology Studies (short-lived)",
-            "institute": "Theological School, Amsterdam, Netherlands",
+            "institute": "Theological School",
+            "location": "Amsterdam, Netherlands",
             "logo": "theology_logo.jpg"
           }
         ],
@@ -20,14 +22,6 @@
       },
       "header": {
         "contacts": [
-          {
-            "icon": "person.png",
-            "value": "Vincent van Gogh"
-          },
-          {
-            "icon": "job.png",
-            "value": "Post-Impressionist Painter"
-          },
           {
             "icon": "mail.png",
             "link": "mailto:vincent@van-gogh.com",
@@ -63,14 +57,17 @@
       "languages": {
         "list": [
           {
+            "flag": "🇳🇱",
             "level": "Native",
             "name": "Dutch"
           },
           {
+            "flag": "🇫🇷",
             "level": "Fluent",
             "name": "French"
           },
           {
+            "flag": "🇩🇪",
             "level": "Intermediate",
             "name": "German"
           }
@@ -143,13 +140,15 @@
           {
             "date": "1880 - 1883",
             "description": "Artista autodidatta, studio sul colore e sulla luce",
-            "institute": "Vari atelier, Parigi, Francia",
+            "institute": "Vari atelier",
+            "location": "Parigi, Francia",
             "logo": "van_gogh_logo.png"
           },
           {
             "date": "1879 - 1880",
             "description": "Studi teologici (brevissima carriera)",
-            "institute": "Scuola Teologica, Amsterdam, Paesi Bassi",
+            "institute": "Scuola Teologica",
+            "location": "Amsterdam, Paesi Bassi",
             "logo": "theology_logo.jpg"
           }
         ],
@@ -157,14 +156,6 @@
       },
       "header": {
         "contacts": [
-          {
-            "icon": "person.png",
-            "value": "Vincent van Gogh"
-          },
-          {
-            "icon": "job.png",
-            "value": "Pittore Post-Impressionista"
-          },
           {
             "icon": "mail.png",
             "link": "mailto:vincent@van-gogh.com",
@@ -200,14 +191,17 @@
       "languages": {
         "list": [
           {
+            "flag": "🇳🇱",
             "level": "Madrelingua",
             "name": "Olandese"
           },
           {
+            "flag": "🇫🇷",
             "level": "Fluente",
             "name": "Francese"
           },
           {
+            "flag": "🇩🇪",
             "level": "Intermedio",
             "name": "Tedesco"
           }

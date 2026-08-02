@@ -20,8 +20,8 @@
 }
 
 .education-logo {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--logo-size, 2rem);
+  height: var(--logo-size, 2rem);
   border-radius: 0.5rem;
   object-fit: cover;
   flex-shrink: 0;
@@ -29,20 +29,37 @@
 
 .education-info {
   flex-grow: 1;
+  height: var(--logo-size, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .education-institute {
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
+  line-height: 1;
+}
+
+.education-location {
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #666);
 }
 
 .education-description {
   font-size: 0.9rem;
-  margin: 0.25rem 0 0;
+  margin: 0;
+  line-height: 1;
 }
 
-.education-date {
+.education-dates {
   text-align: right;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.education-dates p {
+  margin: 0;
 }

@@ -1,48 +1,92 @@
+.cv-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
 .card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
   border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  /* Spaziatura interna */
-  padding: 0.5rem 1rem;
-  /* Spaziatura tra le card */
+  box-shadow: var(--shadow-card);
+  padding: 0.75rem 1.25rem;
   margin-bottom: 1.5rem;
 }
 
 .card h2 {
   text-align: center;
-  margin: 0 0;
+  margin: 0;
   padding-bottom: 0.5rem;
+  color: var(--color-primary);
+  font-size: 1.35rem;
 }
 
-button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border: none;
+.controls {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1.25rem 0;
+}
+
+.controls button {
+  padding: 0.5rem 1.25rem;
+  margin: 0 0.5rem;
+  border: 1px solid transparent;
   border-radius: 0.5rem;
-  background-color:  #dc3545;
+  background-color: var(--color-primary);
   color: white;
+  font-weight: 500;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.controls button:hover {
+  background-color: var(--color-primary-hover);
 }
 
-button:last-child {
-  background-color: #dc3545;
+.controls button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
-button:last-child:hover {
-  background-color: #a71d2a;
-}
-
+/* Explicit print layout spacers */
 #spacer-bot {
-  margin-bottom: 12rem;
+  margin-bottom: 8rem;
 }
 
 #spacer-top {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.print-divider {
+  border: 0;
+  border-top: 1px dashed var(--color-border);
+  margin: 1rem 0;
+}
+
+@media print {
+  @page {
+    margin: 0.5rem;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+  body {
+    margin: 0;
+    background-color: #fff;
+  }
+  .cv-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    margin-bottom: 1rem;
+  }
+  .print-divider {
+    display: none;
+  }
 }

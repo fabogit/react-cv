@@ -40,8 +40,9 @@ const App: React.FC = () => {
           type="button"
           onClick={handleLanguageToggle}
           aria-label={`Switch language to ${language === "Italiano" ? "English" : "Italiano"}`}
+          title={`Switch language to ${language === "Italiano" ? "English" : "Italiano"}`}
         >
-          {language === "Italiano" ? "English" : "Italiano"}
+          {language === "Italiano" ? "🇬🇧" : "🇮🇹"}
         </button>
         <button
           type="button"

@@ -68,6 +68,8 @@ export interface LanguageItem {
   name: string;
   /** Proficiency level (e.g., "Native speaker", "Advanced (C1)") */
   level: string;
+  /** Optional flag emoji (e.g., "🇮🇹", "🇬🇧", "🇪🇸") */
+  flag?: string;
 }
 
 /**

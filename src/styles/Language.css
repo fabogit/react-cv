@@ -20,6 +20,10 @@
   font-size: 1rem;
 }
 
+.language-flag {
+  margin-right: 0.25rem;
+}
+
 .language-level {
   font-size: 0.8rem;
   color: #333;

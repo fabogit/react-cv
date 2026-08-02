@@ -39,10 +39,10 @@ const Education: React.FC<EducationProps> = ({ title, education }) => {
                     <span className="education-location"> • {item.location}</span>
                   )}
                 </h3>
-                <p className="education-description">
-                  {item.description}
-                  <span className="education-date">{formatCvDate(item.date)}</span>
-                </p>
+                <p className="education-description">{item.description}</p>
+              </div>
+              <div className="education-dates">
+                <p>{formatCvDate(item.date)}</p>
               </div>
             </li>
           );

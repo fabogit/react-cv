@@ -12,20 +12,40 @@ export interface LanguagesProps {
   languages: LanguageItem[];
 }
 
+const DEFAULT_FLAGS: Record<string, string> = {
+  Italiano: "🇮🇹",
+  Italian: "🇮🇹",
+  Inglese: "🇬🇧",
+  English: "🇬🇧",
+  Spagnolo: "🇪🇸",
+  Spanish: "🇪🇸",
+};
+
 /**
- * Languages component rendering language names and proficiency levels.
+ * Languages component rendering language names, flag emojis, and proficiency levels.
  */
 const Languages: React.FC<LanguagesProps> = ({ title, languages }) => {
   return (
     <section className="languages card">
       <h2>{title}</h2>
       <ul className="languages-list">
-        {languages.map((language, index) => (
-          <li key={`${language.name}-${index}`} className="language-item">
-            <span className="language-name">{language.name}</span>
-            <span className="language-level">{language.level}</span>
-          </li>
-        ))}
+        {languages.map((language, index) => {
+          const flagEmoji = language.flag || DEFAULT_FLAGS[language.name] || "";
+
+          return (
+            <li key={`${language.name}-${index}`} className="language-item">
+              <span className="language-name">
+                {flagEmoji && (
+                  <span className="language-flag" aria-hidden="true">
+                    {flagEmoji}{" "}
+                  </span>
+                )}
+                {language.name}
+              </span>
+              <span className="language-level">{language.level}</span>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

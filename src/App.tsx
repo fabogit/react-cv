@@ -10,7 +10,7 @@ import "./styles/App.css";
 import rawCvData from "./assets/data/cvData.json";
 import { CvDataSchema } from "./types/cv";
 
-const cvData = rawCvData as unknown as CvDataSchema;
+const cvData: CvDataSchema = rawCvData;
 
 const App: React.FC = () => {
   const localization = ["Italiano", "English"] as const;

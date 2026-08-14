@@ -72,9 +72,10 @@ const App: React.FC = () => {
       />
       <main className="cv-main">
         <WorkExperience title={data.work.title} work={data.work.list} />
-        <div id="spacer-bot"></div>
-        <hr className="print-divider" />
-        <div id="spacer-top"></div>
+        {/* Manual spacers and print divider disabled */}
+        {/* <div id="spacer-bot"></div> */}
+        {/* <hr className="print-divider" /> */}
+        {/* <div id="spacer-top"></div> */}
         <Education title={data.education.title} education={data.education.list} />
         <Languages title={data.languages.title} languages={data.languages.list} />
         <Skills title={data.skills.title.soft} skills={data.skills.soft} />

@@ -76,7 +76,8 @@
       },
       "legal": {
         "place": "Arles",
-        "signature": "signature.webp",
+        "signature": "signature.png",
+        "signatureAlt": "Signature",
         "text": "I authorize the use of my personal works and likeness in accordance with the applicable regulations."
       },
       "skills": {
@@ -103,10 +104,7 @@
         "list": [
           {
             "company": "Independent Artist",
-            "date": [
-              "1888",
-              "1890"
-            ],
+            "date": ["1888", "1890"],
             "location": "Arles, France",
             "logo": "arles.jpg",
             "role": "Painter",
@@ -118,10 +116,7 @@
           },
           {
             "company": "Independent Artist",
-            "date": [
-              "1889",
-              "1890"
-            ],
+            "date": ["1889", "1890"],
             "location": "Saint-Rémy-de-Provence, France",
             "logo": "Saint-Rémy-de-Provence.jpeg",
             "role": "Painter",
@@ -210,7 +205,8 @@
       },
       "legal": {
         "place": "Arles",
-        "signature": "signature.webp",
+        "signature": "signature.png",
+        "signatureAlt": "Firma",
         "text": "Autorizzo l'uso delle mie opere e della mia immagine in conformità alle normative vigenti."
       },
       "skills": {
@@ -237,10 +233,7 @@
         "list": [
           {
             "company": "Artista indipendente",
-            "date": [
-              "1888",
-              "1890"
-            ],
+            "date": ["1888", "1890"],
             "location": "Arles, Francia",
             "logo": "arles.jpg",
             "role": "Pittore",
@@ -252,10 +245,7 @@
           },
           {
             "company": "Artista indipendente",
-            "date": [
-              "1889",
-              "1890"
-            ],
+            "date": ["1889", "1890"],
             "location": "Saint-Rémy-de-Provence, Francia",
             "logo": "Saint-Rémy-de-Provence.jpeg",
             "role": "Pittore",

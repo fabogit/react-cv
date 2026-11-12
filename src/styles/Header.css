@@ -61,6 +61,10 @@
   object-fit: contain;
 }
 
+[data-theme="dark"] .contact-icon {
+  filter: brightness(0) invert(0.85);
+}
+
 .contact-link {
   color: var(--color-primary, #003366);
   text-decoration: none;
@@ -83,6 +87,7 @@
   line-height: 1.5;
   color: var(--color-text, #2d3748);
   text-align: justify;
+  hyphens: auto;
 }
 
 .header-summary p {
@@ -103,5 +108,8 @@
   .header-contacts {
     gap: 0.5rem 1.25rem;
     font-size: 0.85rem;
+  }
+  .contact-icon {
+    filter: none !important;
   }
 }

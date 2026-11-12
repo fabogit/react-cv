@@ -30,7 +30,8 @@ const Languages: React.FC<LanguagesProps> = ({ title, languages }) => {
       <h2>{title}</h2>
       <ul className="languages-list">
         {languages.map((language, index) => {
-          const flagEmoji = language.flag || DEFAULT_FLAGS[language.name] || "";
+          const defaultFlag = DEFAULT_FLAGS[language.name];
+          const flagEmoji = language.flag || defaultFlag || "";
 
           return (
             <li key={`${language.name}-${index}`} className="language-item">

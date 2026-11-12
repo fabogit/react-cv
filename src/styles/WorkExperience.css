@@ -25,7 +25,7 @@
 
 .work-info {
   flex-grow: 1;
-  height: var(--logo-size, 2rem);
+  min-height: var(--logo-size, 2rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,7 +35,7 @@
   font-size: 0.95rem;
   font-weight: bold;
   margin: 0;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .work-location {
@@ -46,15 +46,26 @@
 
 .work-role {
   font-size: 0.85rem;
-  color: #555;
+  color: var(--color-text-muted);
   margin: 0;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .work-dates {
   text-align: right;
   font-size: 0.75rem;
-  color: #666;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.work-dates p {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .work-dates {
+    white-space: normal;
+  }
 }
 
 .work-tasks {

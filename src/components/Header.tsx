@@ -1,5 +1,6 @@
 import React from "react";
 import "./../styles/Header.css";
+import { isSafeContactLink } from "../constants/cv";
 import { ContactItem } from "../types/cv";
 import { getAssetUrl } from "../utils/assets";
 
@@ -22,7 +23,7 @@ export interface HeaderProps {
 }
 
 /**
- * Header component displaying candidate identity (h1, h2), optional profile picture, contact list, and summary.
+ * Header component displaying candidate identity (h1, p), optional profile picture, contact list, and summary.
  */
 const Header: React.FC<HeaderProps> = ({
   name,
@@ -39,41 +40,40 @@ const Header: React.FC<HeaderProps> = ({
     <header className="header card">
       <div className="header-top">
         {shouldRenderImage && (
-          <img
-            src={imageUrl}
-            alt={`${name} - ${title}`}
-            className="header-avatar"
-          />
+          <img src={imageUrl} alt={`${name} - ${title}`} className="header-avatar" />
         )}
         <div className="header-identity">
           <h1 className="header-name">{name}</h1>
-          <h2 className="header-title">{title}</h2>
+          <p className="header-title">{title}</p>
         </div>
       </div>
 
       <div className="header-contacts">
-        {contacts.map((contact, index) => (
-          <span key={`${contact.icon}-${index}`} className="header-contact-item">
-            <img
-              src={getAssetUrl("headerIcon", contact.icon)}
-              alt=""
-              aria-hidden="true"
-              className="contact-icon"
-            />
-            {contact.link ? (
-              <a
-                href={contact.link}
-                className="contact-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {contact.value}
-              </a>
-            ) : (
-              <span>{contact.value}</span>
-            )}
-          </span>
-        ))}
+        {contacts.map((contact, index) => {
+          const iconUrl = getAssetUrl("headerIcon", contact.icon);
+          const hasSafeLink = Boolean(contact.link && isSafeContactLink(contact.link));
+          const isExternalHttpLink =
+            hasSafeLink &&
+            typeof contact.link === "string" &&
+            (contact.link.startsWith("http://") || contact.link.startsWith("https://"));
+
+          return (
+            <span key={`${contact.icon}-${index}`} className="header-contact-item">
+              {iconUrl && <img src={iconUrl} alt="" aria-hidden="true" className="contact-icon" />}
+              {hasSafeLink && contact.link ? (
+                <a
+                  href={contact.link}
+                  className="contact-link"
+                  {...(isExternalHttpLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
+                  {contact.value}
+                </a>
+              ) : (
+                <span>{contact.value}</span>
+              )}
+            </span>
+          );
+        })}
       </div>
 
       <hr className="header-divider" />

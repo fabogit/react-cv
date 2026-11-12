@@ -23,11 +23,20 @@ dist-ssr
 *.sln
 *.sw?
 
-# src/assets/data/cvData.json
+# Private CV data and assets (excluded from repository and public builds)
+src/assets/data/*
+!src/assets/data/cvData.json
 src/assets/img/profile.jpg
 src/assets/img/sign.png
-src/assets/icons/_work
 src/assets/_img
-src/assets/data/*
+src/assets/icons/_work
+src/assets/icons/_school
+public/pdf/
+docs/CV_*.md
+docs/cv-variant-*.md
+
+# Agent & skills metadata
 .agents
+.claude
+skills-lock.json
 .skills-lock.json

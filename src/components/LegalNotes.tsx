@@ -1,6 +1,7 @@
 import React from "react";
 import "./../styles/LegalNotes.css";
 import { getAssetUrl } from "../utils/assets";
+import { formatLocalIsoDate } from "../utils/formatters";
 
 /**
  * Props for the LegalNotes component.
@@ -12,13 +13,15 @@ export interface LegalNotesProps {
   text: string;
   /** Signature image filename */
   signature: string;
+  /** Accessible alt text for the signature image */
+  signatureAlt: string;
 }
 
 /**
  * LegalNotes component rendering GDPR consent text, issuance date, location, and signature image.
  */
-const LegalNotes: React.FC<LegalNotesProps> = ({ place, text, signature }) => {
-  const currentDate = new Date().toISOString().split("T")[0];
+const LegalNotes: React.FC<LegalNotesProps> = ({ place, text, signature, signatureAlt }) => {
+  const currentDate = formatLocalIsoDate();
   const signatureUrl = getAssetUrl("legalSignature", signature);
 
   return (
@@ -30,9 +33,7 @@ const LegalNotes: React.FC<LegalNotesProps> = ({ place, text, signature }) => {
         <p className="legal-date">
           {place}, {currentDate}
         </p>
-        {signatureUrl && (
-          <img src={signatureUrl} alt="Signature" className="legal-signature" />
-        )}
+        {signatureUrl && <img src={signatureUrl} alt={signatureAlt} className="legal-signature" />}
       </div>
     </footer>
   );

@@ -28,24 +28,34 @@
   margin: 0 0 1.25rem 0;
 }
 
-.controls button {
+.controls button,
+.controls .control-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem 1.25rem;
   margin: 0 0.5rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-primary-contrast, white);
   font-weight: 500;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
-.controls button:hover {
+.controls button:hover,
+.controls .control-action:hover {
   background-color: var(--color-primary-hover);
 }
 
-.controls button:focus-visible {
+.controls button:focus-visible,
+.controls .control-action:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
@@ -66,6 +76,18 @@
 }
 
 @media print {
+  :root,
+  [data-theme="dark"] {
+    --color-bg-page: #ffffff !important;
+    --color-bg-card: #ffffff !important;
+    --color-text: #1a202c !important;
+    --color-text-muted: #4a5568 !important;
+    --color-primary: #003366 !important;
+    --color-primary-hover: #003366 !important;
+    --color-border: #e2e8f0 !important;
+    --shadow-card: none !important;
+  }
+
   @page {
     margin: 0.5rem;
   }
@@ -75,7 +97,8 @@
   }
   body {
     margin: 0;
-    background-color: #fff;
+    background-color: #ffffff !important;
+    color: #1a202c !important;
   }
   .cv-container {
     max-width: 100%;
@@ -85,8 +108,29 @@
     box-shadow: none !important;
     border: 1px solid #ddd !important;
     margin-bottom: 1rem;
+    background-color: #ffffff !important;
   }
   .print-divider {
     display: none;
+  }
+  .work-list,
+  .education-list {
+    display: block;
+  }
+  .work-item + .work-item,
+  .education-item + .education-item {
+    margin-top: 0.5rem;
+  }
+  .work-header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .work-tasks li,
+  .education-item,
+  .legal-notes {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }

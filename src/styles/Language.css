@@ -26,5 +26,5 @@
 
 .language-level {
   font-size: 0.8rem;
-  color: #333;
+  color: var(--color-text-muted);
 }

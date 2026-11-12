@@ -1,6 +1,7 @@
 import React from "react";
 import "./../styles/Education.css";
-import { EducationItem, formatCvDate } from "../types/cv";
+import { EducationItem } from "../types/cv";
+import { formatCvDate } from "../utils/formatters";
 import { getAssetUrl } from "../utils/assets";
 
 /**
@@ -27,17 +28,13 @@ const Education: React.FC<EducationProps> = ({ title, education }) => {
 
           return (
             <li key={itemKey} className="education-item">
-              <img
-                src={logoUrl}
-                alt={`${item.institute} logo`}
-                className="education-logo"
-              />
+              {logoUrl ? (
+                <img src={logoUrl} alt={`${item.institute} logo`} className="education-logo" />
+              ) : null}
               <div className="education-info">
                 <h3 className="education-institute">
                   {item.institute}
-                  {item.location && (
-                    <span className="education-location"> • {item.location}</span>
-                  )}
+                  {item.location && <span className="education-location"> • {item.location}</span>}
                 </h3>
                 <p className="education-description">{item.description}</p>
               </div>

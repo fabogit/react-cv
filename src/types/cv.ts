@@ -1,3 +1,7 @@
+import type { SupportedLanguage } from "../constants/cv";
+
+export type { SupportedLanguage };
+
 /**
  * Represents an individual contact entry in the CV header.
  */
@@ -99,6 +103,8 @@ export interface LegalData {
   text: string;
   /** Signature image filename located in src/assets/_img/ */
   signature: string;
+  /** Accessible alt text for the signature image */
+  signatureAlt: string;
 }
 
 /**
@@ -126,21 +132,5 @@ export interface CvLanguageSection {
  * Top-level root schema for the JSON data structure.
  */
 export interface CvDataSchema {
-  language: Record<string, CvLanguageSection>;
+  language: Record<SupportedLanguage, CvLanguageSection>;
 }
-
-/**
- * Formats a CV date into a human-readable string.
- * Supports single date strings, single-item arrays, or range arrays.
- *
- * @param date - The date value as a string or array of strings.
- * @returns Formatted date string (e.g., "2022-07 - 2024-05" or "2019").
- */
-export const formatCvDate = (date: string[] | string): string => {
-  if (Array.isArray(date)) {
-    if (date.length === 0) return '';
-    if (date.length === 1) return date[0];
-    return `${date[0]} - ${date[1]}`;
-  }
-  return date;
-};

@@ -1,6 +1,7 @@
 import React from "react";
 import "./../styles/WorkExperience.css";
-import { WorkItem, formatCvDate } from "../types/cv";
+import { WorkItem } from "../types/cv";
+import { formatCvDate } from "../utils/formatters";
 import { getAssetUrl } from "../utils/assets";
 
 /**
@@ -30,18 +31,14 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ title, work }) => {
               <div className="work-header">
                 <div className="work-top">
                   {/* Left column: Logo */}
-                  <img
-                    src={logoUrl}
-                    alt={`${item.company} logo`}
-                    className="work-logo"
-                  />
+                  {logoUrl ? (
+                    <img src={logoUrl} alt={`${item.company} logo`} className="work-logo" />
+                  ) : null}
                   {/* Center column: Company Name, Role, Location */}
                   <div className="work-info">
                     <h3 className="work-company">
                       {item.company}
-                      {item.location && (
-                        <span className="work-location"> • {item.location}</span>
-                      )}
+                      {item.location && <span className="work-location"> • {item.location}</span>}
                     </h3>
                     <p className="work-role">{item.role}</p>
                   </div>
